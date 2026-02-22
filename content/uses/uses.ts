@@ -11,16 +11,22 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://neovim.io',
       },
       {
+        name: 'Claude Code',
+        description:
+          'AI-powered coding assistant from Anthropic. Helps with code generation, refactoring, and exploring complex codebases.',
+        url: 'https://claude.ai',
+      },
+      {
         name: 'Cursor',
         description:
           'AI-assisted editor built on VS Code. I use it when I want inline AI suggestions and chat-driven development for rapid prototyping.',
         url: 'https://cursor.com',
       },
       {
-        name: 'Kitty',
+        name: 'Ghostty',
         description:
-          'GPU-accelerated terminal emulator. Fast, configurable, and supports ligatures and image rendering out of the box.',
-        url: 'https://sw.kovidgoyal.net/kitty',
+          'Fast, native terminal emulator with GPU acceleration. Clean, minimal, and incredibly responsive.',
+        url: 'https://ghostty.org',
       },
       {
         name: 'tmux',
@@ -52,10 +58,16 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://nextjs.org',
       },
       {
-        name: 'Go',
+        name: 'NestJS',
         description:
-          'For performance-critical services, CLIs, and infrastructure tooling. Simple, fast compilation, and excellent concurrency primitives.',
-        url: 'https://go.dev',
+          'Progressive Node.js framework for building efficient, scalable server-side applications with TypeScript.',
+        url: 'https://nestjs.com',
+      },
+      {
+        name: 'React Native / Expo',
+        description:
+          'For building cross-platform mobile apps. Expo simplifies the development workflow and provides excellent tooling.',
+        url: 'https://expo.dev',
       },
       {
         name: 'Rust',
@@ -64,10 +76,39 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://www.rust-lang.org',
       },
       {
-        name: 'Python',
+        name: 'Go',
         description:
-          'For scripting, data processing, and ML-adjacent work. Great ecosystem for automation and quick prototyping.',
-        url: 'https://www.python.org',
+          'For performance-critical services, CLIs, and infrastructure tooling. Simple, fast compilation, and excellent concurrency primitives.',
+        url: 'https://go.dev',
+      },
+    ],
+  },
+  {
+    title: 'Databases',
+    items: [
+      {
+        name: 'PostgreSQL',
+        description:
+          'Primary relational database. Robust, feature-rich, and excellent for complex queries and data integrity.',
+        url: 'https://www.postgresql.org',
+      },
+      {
+        name: 'MongoDB',
+        description:
+          'Document database for flexible schema designs. Great for rapid prototyping and specific use cases.',
+        url: 'https://www.mongodb.com',
+      },
+      {
+        name: 'Apache Cassandra',
+        description:
+          'Distributed NoSQL database for high availability and massive scalability. Built Magda to work with it.',
+        url: 'https://cassandra.apache.org',
+      },
+      {
+        name: 'Redis',
+        description:
+          'In-memory data store for caching, sessions, and real-time features. Essential for performance optimization.',
+        url: 'https://redis.io',
       },
     ],
   },
@@ -93,10 +134,10 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://www.docker.com',
       },
       {
-        name: 'Terraform',
+        name: 'OrbStack',
         description:
-          'Infrastructure as code for provisioning and managing cloud resources. Keeps infrastructure reproducible and version-controlled.',
-        url: 'https://www.terraform.io',
+          'Fast, lightweight Docker and Linux on macOS. Much better performance than Docker Desktop.',
+        url: 'https://orbstack.dev',
       },
       {
         name: 'GitHub Actions',
@@ -110,22 +151,22 @@ export const usesCategories: UsesCategory[] = [
     title: 'Hardware',
     items: [
       {
-        name: 'MacBook Pro M3 Max',
+        name: 'MacBook Pro',
         description:
-          'Primary development machine. The M3 Max handles large codebases, Docker containers, and compilation with ease.',
+          'Primary mobile development machine. Apple Silicon handles large codebases, Docker containers, and compilation with ease.',
         url: 'https://www.apple.com/macbook-pro',
       },
       {
-        name: 'Apple Studio Display',
+        name: 'Mac Mini',
         description:
-          '27-inch 5K Retina display. Excellent color accuracy and plenty of screen real estate for side-by-side coding.',
-        url: 'https://www.apple.com/studio-display',
+          'Desktop workstation for heavy workloads and always-on development tasks.',
+        url: 'https://www.apple.com/mac-mini',
       },
       {
-        name: 'Keychron Q1 Pro',
+        name: 'Apple Magic Keyboard',
         description:
-          'Wireless mechanical keyboard with a compact 75% layout. Customizable via QMK/VIA firmware for a personalized typing experience.',
-        url: 'https://www.keychron.com/products/keychron-q1-pro',
+          'Clean, minimal keyboard that pairs seamlessly with the Mac ecosystem.',
+        url: 'https://www.apple.com/shop/mac/accessories/keyboards',
       },
       {
         name: 'Logitech MX Master 3S',
@@ -139,10 +180,10 @@ export const usesCategories: UsesCategory[] = [
     title: 'Apps & Services',
     items: [
       {
-        name: 'Arc Browser',
+        name: 'Chrome',
         description:
-          'Chromium-based browser with a unique sidebar-driven interface. Spaces and profiles keep work and personal browsing organized.',
-        url: 'https://arc.net',
+          'Primary browser for development. DevTools, extensions ecosystem, and cross-platform sync.',
+        url: 'https://www.google.com/chrome',
       },
       {
         name: 'Raycast',
@@ -151,10 +192,10 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://www.raycast.com',
       },
       {
-        name: '1Password',
+        name: 'Shortcat',
         description:
-          'Password manager for personal and team credentials. SSH key management and CLI integration are indispensable for development.',
-        url: 'https://1password.com',
+          'Keyboard-first navigation for macOS. Click any UI element without touching the mouse.',
+        url: 'https://shortcat.app',
       },
       {
         name: 'Linear',
@@ -169,10 +210,16 @@ export const usesCategories: UsesCategory[] = [
         url: 'https://www.figma.com',
       },
       {
-        name: 'Notion',
+        name: 'Boom',
         description:
-          'All-in-one workspace for notes, documentation, and knowledge management. Flexible enough for personal and team use.',
-        url: 'https://www.notion.so',
+          'System-wide volume booster and equalizer for macOS. Better audio for music and calls.',
+        url: 'https://www.globaldelight.com/boom',
+      },
+      {
+        name: 'Kindle',
+        description:
+          'For reading technical books and staying up to date with the latest in software engineering.',
+        url: 'https://www.amazon.com/kindle',
       },
     ],
   },

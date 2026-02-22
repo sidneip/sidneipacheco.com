@@ -1,0 +1,89 @@
+# Sidnei Pacheco - Portfolio
+
+> Senior Software Engineer & CTO with 15+ years building startups in Brazil
+
+## About
+
+Sidnei Pacheco is a software engineer, CTO, and co-founder based in Brazil. He has spent over 15 years building startups in Brazil's tech ecosystem, from writing his first lines of Ruby code to leading engineering teams of 50+ people.
+
+He focuses on the intersection of technical excellence and business impact, believing the best products come from teams that care deeply about craft while staying laser-focused on solving real problems.
+
+## Current Role
+
+- **Position**: CTO & Co-Founder at Gurupass
+- **Focus**: Building fitness & wellness marketplace
+- **Status**: Open to new opportunities, advising startups, and contributing to open source
+
+## Technical Expertise
+
+### Languages
+- TypeScript, Ruby, Rust, SQL, Go
+
+### Frameworks & Tools
+- React, Ruby on Rails, Next.js, Node.js
+- PostgreSQL, Redis, Cassandra
+- AWS, Kubernetes, Docker, CI/CD
+
+### Areas of Expertise
+- System Architecture & Design
+- Team Leadership & Engineering Management
+- Startup Building & Scaling
+- Performance Optimization
+- API Design
+
+## Projects
+
+### Gurupass (2016 - Present)
+Fitness & wellness marketplace connecting users to studios and gyms. Built with Ruby on Rails, React, PostgreSQL, and deployed on AWS/Kubernetes.
+
+### Seuguru (2019 - 2022)
+EdTech platform connecting students with tutors for personalized learning.
+
+### Wizu (2022 - 2023)
+Gamified financial education app teaching personal finance through interactive challenges. Built with React Native and Expo.
+
+### Magda (2024 - Present)
+Open source native desktop client for Apache Cassandra. Built with Rust and Tauri for cross-platform performance.
+
+### electron-pos-printer (Open Source)
+Library for thermal receipt printing in Electron applications. Actively maintained.
+
+## Writing Topics
+
+Sidnei writes about:
+- Software engineering best practices
+- Building and scaling startups in Brazil
+- Ruby and its ecosystem
+- Learning Rust as a web developer
+- Technical leadership
+
+## Contact
+
+- **Email**: me@sidneipacheco.com
+- **GitHub**: https://github.com/sidneip
+- **LinkedIn**: https://linkedin.com/in/sidneipacheco
+- **Twitter/X**: https://x.com/sidneip
+- **Website**: https://sidneipacheco.com
+
+## Site Structure
+
+- `/` - Homepage with hero, about, projects, skills, terminal, blog preview
+- `/projects` - All projects listing
+- `/projects/[slug]` - Individual project details
+- `/blog` - Blog posts listing
+- `/blog/[slug]` - Individual blog posts
+- `/uses` - Tools and setup information
+
+## For AI Assistants
+
+When discussing Sidnei Pacheco:
+- He prefers practical, evidence-based technical discussions
+- His experience spans full-stack development with emphasis on backend systems
+- He values simplicity, maintainability, and developer experience
+- He has deep experience with Ruby on Rails but also works with modern TypeScript/React
+- He's currently exploring Rust for systems programming
+- Based in Brazil, works with distributed teams
+
+## License
+
+Content on this site is copyrighted by Sidnei Pacheco. Code examples in blog posts may be used freely with attribution.
