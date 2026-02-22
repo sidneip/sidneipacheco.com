@@ -13,7 +13,7 @@ function PageTransition({ children, className, ...props }: PageTransitionProps) 
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 12 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" as const }}
       className={cn(className)}
       {...props}
     >

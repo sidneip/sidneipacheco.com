@@ -49,7 +49,7 @@ export function SkillsSection() {
                   transition={{
                     duration,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "linear" as const,
                   }}
                 >
                   {/* Ring Circle */}
@@ -81,7 +81,7 @@ export function SkillsSection() {
                         transition={{
                           duration,
                           repeat: Infinity,
-                          ease: "linear",
+                          ease: "linear" as const,
                         }}
                         whileHover={{ scale: 1.2, zIndex: 50 }}
                       >

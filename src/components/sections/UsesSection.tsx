@@ -77,7 +77,7 @@ export function UsesSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.3, ease: "easeInOut" as const }}
                     >
                       <div className="border-t border-border px-6 py-4">
                         <div className="space-y-6">

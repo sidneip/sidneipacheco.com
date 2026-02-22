@@ -11,7 +11,7 @@ export function TerminalCursor() {
         duration: 0.8,
         repeat: Infinity,
         repeatType: "reverse",
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       }}
       aria-hidden="true"
     />

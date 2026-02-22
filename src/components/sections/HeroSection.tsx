@@ -46,7 +46,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
   },
 };
@@ -58,7 +58,7 @@ const badgeVariants = {
     scale: 1,
     transition: {
       duration: 0.4,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
@@ -157,7 +157,7 @@ export function HeroSection() {
         <motion.div
           className="flex flex-col items-center gap-2 text-foreground/40"
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" as const }}
         >
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <svg
