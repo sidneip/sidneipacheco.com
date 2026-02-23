@@ -2,6 +2,17 @@ import type { BlogPost } from "@/types";
 
 export const posts: BlogPost[] = [
   {
+    slug: "introducing-magda",
+    title: "Introducing Magda: A Free, Open Source Cassandra Client",
+    description:
+      "A free, open source Cassandra GUI and desktop client built in Rust. Modern CQL editor, schema browser, and multi-cluster management.",
+    date: "2026-02-23",
+    category: "Engineering",
+    tags: ["rust", "cassandra", "database", "open-source", "gui", "cql"],
+    readingTime: "6 min",
+    published: true,
+  },
+  {
     slug: "why-i-still-love-ruby",
     title: "Why I Still Love Ruby",
     description:
