@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@content/projects/projects";
 import { ProjectDetailPage } from "./ProjectDetailPage";
+import { BreadcrumbJsonLd, ProjectJsonLd } from "@/components/seo/JsonLd";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -48,5 +50,23 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  return <ProjectDetailPage project={project} />;
+  const projectUrl = `${SITE_CONFIG.url}/projects/${project.slug}`;
+  const breadcrumbs = [
+    { name: "Home", url: SITE_CONFIG.url },
+    { name: "Projects", url: `${SITE_CONFIG.url}/projects` },
+    { name: project.name, url: projectUrl },
+  ];
+
+  return (
+    <>
+      <BreadcrumbJsonLd items={breadcrumbs} />
+      <ProjectJsonLd
+        name={project.name}
+        description={project.longDescription || project.description}
+        url={projectUrl}
+        technologies={project.stack}
+      />
+      <ProjectDetailPage project={project} />
+    </>
+  );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { posts, blogContent, categoryColors } from "@content/blog";
 import { BlogPostPage } from "./BlogPostPage";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { SITE_CONFIG } from "@/lib/constants";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -54,11 +56,30 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
+  const postUrl = `${SITE_CONFIG.url}/blog/${post.slug}`;
+  const breadcrumbs = [
+    { name: "Home", url: SITE_CONFIG.url },
+    { name: "Blog", url: `${SITE_CONFIG.url}/blog` },
+    { name: post.title, url: postUrl },
+  ];
+
   return (
-    <BlogPostPage
-      post={post}
-      content={content}
-      categoryColor={categoryColors[post.category]}
-    />
+    <>
+      <BreadcrumbJsonLd items={breadcrumbs} />
+      <ArticleJsonLd
+        title={post.title}
+        description={post.description}
+        datePublished={post.date}
+        url={postUrl}
+        tags={post.tags}
+        image={`${SITE_CONFIG.url}/og-image.png`}
+        articleBody={post.description}
+      />
+      <BlogPostPage
+        post={post}
+        content={content}
+        categoryColor={categoryColors[post.category]}
+      />
+    </>
   );
 }

@@ -1,5 +1,42 @@
 import { SITE_CONFIG } from "@/lib/constants";
 
+/* -------------------------------------------------------------------------- */
+/*  BreadcrumbList Schema                                                      */
+/* -------------------------------------------------------------------------- */
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface BreadcrumbJsonLdProps {
+  items: BreadcrumbItem[];
+}
+
+export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Person Schema                                                              */
+/* -------------------------------------------------------------------------- */
+
 export function PersonJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -63,16 +100,22 @@ interface ArticleJsonLdProps {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   url: string;
   tags?: string[];
+  image?: string;
+  articleBody?: string;
 }
 
 export function ArticleJsonLd({
   title,
   description,
   datePublished,
+  dateModified,
   url,
   tags = [],
+  image,
+  articleBody,
 }: ArticleJsonLdProps) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -80,7 +123,7 @@ export function ArticleJsonLd({
     headline: title,
     description: description,
     datePublished: datePublished,
-    dateModified: datePublished,
+    dateModified: dateModified || datePublished,
     url: url,
     author: {
       "@type": "Person",
@@ -92,6 +135,8 @@ export function ArticleJsonLd({
       name: SITE_CONFIG.name,
     },
     keywords: tags,
+    ...(image && { image: image }),
+    ...(articleBody && { articleBody: articleBody }),
   };
 
   return (

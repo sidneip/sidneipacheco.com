@@ -92,7 +92,7 @@ export function AboutSection() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border/50 bg-card/30 shadow-lg backdrop-blur-xl">
                 <Image
                   src="/sidnei.jpeg"
-                  alt="Sidnei Pacheco"
+                  alt="Sidnei Pacheco - Senior Software Engineer and CTO with 15+ years of experience building scalable products"
                   fill
                   className="object-cover"
                   priority

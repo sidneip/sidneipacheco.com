@@ -149,11 +149,21 @@ function MDXImage({
 }) {
   if (!src) return null;
 
+  // Generate a descriptive alt from filename if not provided
+  const defaultAlt = src
+    .split('/')
+    .pop()
+    ?.replace(/\.[^.]+$/, '')
+    .replace(/[-_]/g, ' ')
+    .replace(/\b\w/g, (c) => c.toUpperCase()) || 'Blog post image';
+
+  const imageAlt = alt || defaultAlt;
+
   return (
     <figure className="my-8">
       <Image
         src={src}
-        alt={alt ?? ''}
+        alt={imageAlt}
         width={width ?? 800}
         height={height ?? 450}
         className="rounded-lg"

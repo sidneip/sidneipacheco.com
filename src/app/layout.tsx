@@ -49,6 +49,14 @@ export const metadata: Metadata = {
     title: "Sidnei Pacheco — Senior Software Engineer",
     description:
       "Senior Software Engineer with 15+ years building scalable products. CTO & Founder experience.",
+    images: [
+      {
+        url: "https://sidneipacheco.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sidnei Pacheco — Senior Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -89,6 +97,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Resource hints for faster third-party connections */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
